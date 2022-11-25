@@ -1,0 +1,30 @@
+<div class="col-8 mx-auto mt-4">
+  <table class="table table-striped table-hover table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th>Id</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Rate</th>
+        <th>Count</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of allProducts">
+        <td>{{prod.id}}</td>
+        <td>{{prod.category}}</td>
+        <td>{{prod.description}}</td>
+        <td>
+          <img src="{{prod.image}}" alt="{{prod.category}}" width="80" />
+          </td>
+        <td>{{prod.price}}</td>
+        <td>{{prod.rating.rate}}</td>
+        <td>{{prod.rating.count}}</td>
+        <td>{{prod.title}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

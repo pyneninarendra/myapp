@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 15px;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+}
+
+header {
+  display: flex;
+  grid-area: header;
+  background-color: #203040;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a{
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover{
+  text-decoration: none;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  display: flex;
+  grid-area: footer;
+  background-color: #203040;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+@import './../node_modules/bootstrap/dist/css/bootstrap.min.css';
